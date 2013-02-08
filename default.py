@@ -342,17 +342,17 @@ def monitorPlayback(playlist, clips = None, url = None, sliders = None, channelI
 				lastPlaylistPosition = currentPlaylistPosition
 				
 				# Wait a bit, so the list item is refreshed
-				time.sleep(2)
-				timeCounter = timeCounter + 2
+				#time.sleep(2)
+				#timeCounter = timeCounter + 2
 				
-				if xbmc.Player().isPlaying():
-					xbmc.executebuiltin('XBMC.ActivateWindow(fullscreeninfo)')
-				
-				time.sleep(osdTime)
-				timeCounter = timeCounter + osdTime
-				
-				if xbmc.Player().isPlaying():
-					xbmc.executebuiltin('XBMC.Action(PreviousMenu)')
+				#if xbmc.Player().isPlaying():
+				#	xbmc.executebuiltin('XBMC.ActivateWindow(fullscreeninfo)')
+				#
+				#time.sleep(osdTime)
+				#timeCounter = timeCounter + osdTime
+				#
+				#if xbmc.Player().isPlaying():
+				#	xbmc.executebuiltin('XBMC.Action(PreviousMenu)')
 			
 			if timeCounter >= 30:
 				timeCounter = 0
