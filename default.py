@@ -13,7 +13,11 @@ MODE_PLAY = 1
 MODE_VEEQUALIZER = 2
 MODE_VEEQUALIZER_PLAY = 3
 
-COOKIEFILE = xbmc.translatePath(os.path.join(addon.getAddonInfo('profile'), 'cookies.lwp'))
+ADDONUSERDATAPATH = xbmc.translatePath(addon.getAddonInfo('profile'))
+COOKIEFILE = os.path.join(ADDONUSERDATAPATH, 'cookies.lwp')
+
+if not os.path.exists(ADDONUSERDATAPATH):
+	os.makedirs(ADDONUSERDATAPATH)
 
 
 
